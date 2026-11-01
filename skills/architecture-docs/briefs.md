@@ -1,6 +1,7 @@
 # Subagent briefs
 
 Fill in the `<...>` parts. Each brief stands alone: the subagent has no other context.
+`<unslop path>` is the absolute path of `../unslop/SKILL.md` next to this skill.
 
 ## Fact finder (small, fast model, one per area)
 
@@ -87,7 +88,8 @@ readers. Write data/architecture.js<, data/tldr.js><, data/features.js> and them
 - You may change engine files in <site path>/app/ when this project needs it. List each
   change and why.
 
-Write plain sentences: no filler, no marketing words. Then run
+Read <unslop path> first and apply it to every string the page shows: titles, summaries,
+bodies, edge labels, flow steps, TL;DR blocks, feature entries and hidden entries. Then run
 node <atlas path>/scripts/check.mjs <site path> --repo <repo path> and fix every error.
 Report what you made, what you left out, and any engine changes.
 ```
