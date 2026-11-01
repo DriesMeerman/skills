@@ -7,7 +7,7 @@ description: Take a change all the way to a merged PR while the owner is not wat
 
 Adapted from [tstack](https://github.com/t3dotgg/tstack) (MIT, see
 [TSTACK-LICENSE](TSTACK-LICENSE)). Apply [unslop](../unslop/SKILL.md) to everything you
-write.
+write. In T3 Code, also read [t3-code.md](../start-work/t3-code.md); skip it elsewhere.
 
 The owner said "full send" because they are not watching this thread. Nobody reads your
 updates until long after you stop. You own the work from where it is now to a merged PR.

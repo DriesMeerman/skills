@@ -8,6 +8,7 @@ description: Pick the most important open issue or PR in this repo and start wor
 Take one task from the repo's open work and do it here. Apply
 [unslop](../unslop/SKILL.md) to everything you write for the user, PR bodies
 and comments. Read the project's rules first, as [project-rules.md](project-rules.md) says.
+In T3 Code, also read [t3-code.md](t3-code.md); skip it elsewhere.
 
 The review flow in [review.md](review.md) is adapted from
 [tstack](https://github.com/t3dotgg/tstack) (MIT, see [TSTACK-LICENSE](TSTACK-LICENSE)).

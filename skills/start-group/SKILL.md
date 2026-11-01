@@ -10,6 +10,8 @@ Run several tasks from the repo's open work at once. Apply
 and comments. Read the project's rules first
 ([project-rules.md](../start-work/project-rules.md)). Survey and rank as in
 [start-work](../start-work/SKILL.md) steps 1 and 2, then pick a group instead of one item.
+In T3 Code, also read [t3-code.md](../start-work/t3-code.md), which says how to start and
+wait for the agents there; skip it elsewhere.
 An open `ci-red` issue (a red run on `main`) goes first, in the first wave, even without
 `agent-ready`: merge-ready merges nothing else until it is fixed. The same filter applies:
 only issues labelled `agent-ready` go in the wave table, plus PRs that need work. With none,
