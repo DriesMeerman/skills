@@ -15,6 +15,16 @@ Each skill lives in `skills/<name>/SKILL.md` and uses the [Agent Skills format](
 | --- | --- | --- |
 | [unslop](skills/unslop/SKILL.md) | Remove AI writing patterns. | Imported from [cursor/plugins](https://github.com/cursor/plugins/blob/main/pstack/skills/unslop/SKILL.md) |
 
+### Docs
+
+| Skill | Purpose | Origin |
+| --- | --- | --- |
+| [architecture-docs](skills/architecture-docs/SKILL.md) | Build or update an interactive architecture docs site for a repo: a TL;DR map that zooms into the real diagrams, flows that light up their path, and a searchable features catalog. Small subagents gather facts and a large model designs the diagrams. | Authored, uses the [atlas](https://github.com/DriesMeerman/atlas) engine |
+
+architecture-docs runs only when invoked (`disable-model-invocation: true`). It needs Node
+and git, and copies the atlas engine into the project's `docs/architecture-site/`. It works
+in Claude Code and Codex.
+
 ### Work loop
 
 Skills for longer, more autonomous work on a GitHub repo: pick work, ship it as reviewed PRs, and merge in safe batches. They share the labels `agent-ready`, `needs-human` and `ready-to-merge`, and create them in a repo when they are missing.
