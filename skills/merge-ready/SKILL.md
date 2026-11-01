@@ -10,7 +10,8 @@ Merge the PRs that [start-work](../start-work/SKILL.md) and
 [start-group](../start-group/SKILL.md) labelled `ready-to-merge`. Apply
 [unslop](../unslop/SKILL.md) to everything you write for the user and on PRs. Read the
 project's rules first ([project-rules.md](../start-work/project-rules.md)): the full suite,
-the CI workflow, any heavy-command wrapper and what is off limits.
+the CI workflow, any heavy-command wrapper and what is off limits. In T3 Code, also read
+[t3-code.md](../start-work/t3-code.md) for waiting on the train; skip it elsewhere.
 
 This skill runs on Haiku 5.5 (`claude-haiku-5-5`): it follows fixed steps and makes no
 design calls. A conflict that needs a judgment call is reported, not resolved (step 4).

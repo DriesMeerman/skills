@@ -7,7 +7,7 @@ description: Take a change all the way to a merged PR while the owner is not wat
 
 Adapted from [tstack](https://github.com/t3dotgg/tstack) (MIT, see
 [TSTACK-LICENSE](TSTACK-LICENSE)). Apply [unslop](../unslop/SKILL.md) to everything you
-write.
+write. In T3 Code, also read [t3-code.md](../start-work/t3-code.md); skip it elsewhere.
 
 The owner said "full send" because they are not watching this thread. Nobody reads your
 updates until long after you stop. You own the work from where it is now to a merged PR.
@@ -52,7 +52,8 @@ report.
 
 Stay active from step 1 to step 7. If you end your turn while a review or test run is
 going, the work stops, because nobody will prompt you again. Start long commands in the
-background and wait for their completion notice. Never write a polling or `sleep` loop.
+background and wait for their completion notice. Never write a polling or `sleep` loop,
+except the bounded wait [review.md](../start-work/review.md) gives subagents.
 
 ## Proof
 

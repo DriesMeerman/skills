@@ -44,7 +44,7 @@ Skills for longer, more autonomous work on a GitHub repo: pick work, ship it as 
 | [overnight](skills/overnight/SKILL.md) | Run start-group waves unattended, then one merge train at the end. | Authored |
 | [midnight-oil](skills/midnight-oil/SKILL.md) | Overnight on the clock instead of a wave count. | Authored |
 
-The work-loop skills link to each other by relative path, so install them together. They also link to `unslop`. Shared rules live in [skills/start-work/project-rules.md](skills/start-work/project-rules.md) (how to find a project's test command, hot files and limits), [review.md](skills/start-work/review.md), [ready.md](skills/start-work/ready.md) and [review.sh](skills/start-work/review.sh).
+The work-loop skills link to each other by relative path, so install them together. They also link to `unslop`. Shared rules live in [skills/start-work/project-rules.md](skills/start-work/project-rules.md) (how to find a project's test command, hot files and limits), [review.md](skills/start-work/review.md), [ready.md](skills/start-work/ready.md) and [review.sh](skills/start-work/review.sh). [t3-code.md](skills/start-work/t3-code.md) says how agents start, wait and watch PRs when they run in [T3 Code](https://github.com/pingdotgg/t3code); the skills read it only there.
 
 They need `gh` signed in, and for reviews the `codex` CLI (Sol) or `claude` CLI (Opus); `review.sh` reports a missing CLI so the skills fall back to Opus. issue-triage needs Node to build its page and keeps its files in `~/.cache/issue-triage/`, outside the repo.
 

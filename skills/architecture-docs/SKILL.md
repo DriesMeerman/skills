@@ -9,7 +9,10 @@ disable-model-invocation: true
 Build an interactive docs site for this repository from the
 [atlas](https://github.com/DriesMeerman/atlas) engine, or bring an existing one up to date.
 Apply [unslop](../unslop/SKILL.md) to every piece of text the site shows and to your
-report.
+report. Site text means everything a reader sees: titles and taglines, summaries, bodies,
+edge labels, flow steps, TL;DR blocks, feature entries, empty states and help text, and the
+site's `AGENTS.md`. Subagents that write site text get the unslop path in their brief
+(`../unslop/SKILL.md` next to this skill, given as an absolute path).
 
 - `/architecture-docs` builds a new site. If one already exists, ask whether to update it
   or start over.
@@ -104,7 +107,8 @@ designer decides:
   When it has none, invent one that suits the project; don't reuse the engine default
   unless it fits.
 
-The designer writes the `data/*.js` files and `theme.css` directly. A large system may need
+The designer writes the `data/*.js` files and `theme.css` directly, and applies unslop to
+every string the page shows. A large system may need
 two designers in sequence: architecture and flows first, then TL;DR and features, which
 point at the nodes the first one made.
 
@@ -151,6 +155,11 @@ date). `SOURCE.md` gets the same commit and date.
 
 Make any engine changes this project needs now, and record them in `SCHEMA.md`.
 
+Read the site text yourself against [unslop](../unslop/SKILL.md) before the checks:
+`data/*.js`, `data/site.js`, `index.html`, any UI strings you changed in `app/`, and
+`AGENTS.md`. Rewrite what fails it. Hidden entries count too, since a later run may show
+them.
+
 Check, and fix everything it reports:
 
 ```sh
@@ -192,7 +201,8 @@ how to open it. Do not commit unless the user asks.
 3. Map changes to entries: search `data/*.js` for each changed path. Hand this to small
    subagents when many files changed, one per area, with the update brief from
    [briefs.md](briefs.md).
-4. Edit the affected entries: line numbers, bodies, edges, flow steps. New components or a
+4. Edit the affected entries, applying unslop to new and rewritten text: line numbers,
+   bodies, edges, flow steps. New components or a
    changed request path go to the large model, as in section 5, for the parts they touch.
 5. Set the new commit and today's date in `SOURCE.md` and `data/site.js` (`commit`,
    `generated`).
