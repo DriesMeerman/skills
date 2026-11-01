@@ -24,7 +24,24 @@ review=$(<skills>/start-work/review.sh <reviewer> <n> <out>); echo "exit=$?"
 
 It can take up to 30 minutes, and a foreground Bash call stops waiting after 10. Start
 it as a background Bash command, wait for its completion notice, then read the exit status
-and the review file. Do nothing else on the PR until it has finished. The script:
+and the review file. Do nothing else on the PR until it has finished. In T3 Code, wait as
+[t3-code.md](t3-code.md) says instead.
+
+A subagent gets no completion notice once its turn ends, and its background commands die
+with the turn. A subagent stays in its turn until the review is done. It writes the exit
+status to a file and checks for it with foreground calls of under 10 minutes each, repeated
+until the status is there:
+
+```sh
+# background
+<skills>/start-work/review.sh <reviewer> <n> <out> > <out>/review-run.txt 2>&1; echo "exit=$?" >> <out>/review-run.txt
+# foreground, repeat until it prints the exit line
+perl -e 'alarm 540; exec @ARGV' sh -c 'until grep -q "^exit=" <out>/review-run.txt; do sleep 20; done'; tail -2 <out>/review-run.txt
+```
+
+The last two lines are the review file's path and `exit=<status>`.
+
+The script:
 
 - refuses unless `HEAD` is the PR head and the worktree is clean (exit 2)
 - refuses a head it already reviewed (exit 3). Review once per pushed head. Run again only

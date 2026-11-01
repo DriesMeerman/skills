@@ -89,6 +89,8 @@ Give each subagent:
   wrapper when the project has one, so only one runs at a time across all subagents
 - after its PR is open, the steps in section 4, with its reviewer from the
   table
+- to stay in its turn until its review has finished, waiting as review.md says for
+  subagents. Its background commands die when it ends its turn, and the review is lost.
 
 Stacked items branch from the base PR's branch. When a base branch moves,
 merge `origin/main` into the branch in its worktree and never force-push.

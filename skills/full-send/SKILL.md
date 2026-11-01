@@ -52,7 +52,8 @@ report.
 
 Stay active from step 1 to step 7. If you end your turn while a review or test run is
 going, the work stops, because nobody will prompt you again. Start long commands in the
-background and wait for their completion notice. Never write a polling or `sleep` loop.
+background and wait for their completion notice. Never write a polling or `sleep` loop,
+except the bounded wait [review.md](../start-work/review.md) gives subagents.
 
 ## Proof
 
